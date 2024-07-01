@@ -1,0 +1,9 @@
+[Unit]
+Description=Benji's second SSH-attacker blocker
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/block /home/benji/bad_users.txt /var/log/block.log
+
+[Install]
+WantedBy=multi-user.target
